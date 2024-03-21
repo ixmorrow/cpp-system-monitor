@@ -26,7 +26,7 @@ float Processor::Utilization() {
     long total_jiffies_diff = total_jiffies_end - total_jiffies_start;
 
     // Calculate CPU utilization as a percentage
-    float utilization = static_cast<float>(active_jiffies_diff) / total_jiffies_diff;
+    float utilization = static_cast<float>(active_jiffies_diff) / static_cast<float>(total_jiffies_diff);
 
     return utilization;
 }
